@@ -348,3 +348,4 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+/IdentityManagerService/Migrations/20200622165256_InitialMigration.cs

@@ -13,7 +13,7 @@ using IdentityManagerService.Utility;
 
 namespace IdentityManagerService.Controllers
 {
-    [Route("api/authenticate")]
+    [Route("api/[controller]")]
     [ApiController]
     public class AuthenticationController : ControllerBase
     {
