@@ -25,7 +25,7 @@ namespace IdentityManagerService
                             .AddJsonFile("appsettings.json")
                             .AddJsonFile("appsettings." + env.EnvironmentName + ".json", optional: true)
                             .AddEnvironmentVariables()
-                            .Build(); ;
+                            .Build();
         }
 
         public IConfiguration Configuration { get; }
