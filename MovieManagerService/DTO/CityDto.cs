@@ -1,5 +1,5 @@
 ﻿
-namespace MovieManagerService.Model
+namespace MovieManagerService.DTO
 {
     public class CityDto
     {

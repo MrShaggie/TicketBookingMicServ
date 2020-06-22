@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace MovieManagerService.Model
+namespace MovieManagerService.DTO
 {
     public class MovieDto
     {
