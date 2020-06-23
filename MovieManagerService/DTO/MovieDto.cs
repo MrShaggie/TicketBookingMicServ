@@ -14,10 +14,11 @@ namespace MovieManagerService.DTO
         public string Movie_Description { get; set; }
         [Required]
         public DateTime DateAndTime { get; set; }
-        public string MovieImage { get; set; }
         [Required]
         public string MovieLanguage { get; set; }
         [Required]
         public int MultiplexId { get; set; }
+        [Required]
+        public string Genre { get; set; }
     }
 }

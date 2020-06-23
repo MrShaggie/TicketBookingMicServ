@@ -73,10 +73,58 @@ namespace MovieManagerService.Controllers
                 results.Add(new MovieDto
                 {
                     Movie_Name = movie.Movie_Name,
-                    MovieImage = movie.MovieImage,
                     DateAndTime = movie.DateAndTime,
                     MovieLanguage = movie.MovieLanguage,
-                    Movie_Description = movie.Movie_Description
+                    Movie_Description = movie.Movie_Description,
+                    Genre = movie.Genre
+
+                });
+            }
+            return Ok(results);
+        }
+
+        [HttpGet]
+        [Route("movie/language/{language}")]
+        public IActionResult Movies(string language)
+        {
+            var results = new List<MovieDto>();
+            var movies = _movieRepo.GetMovies(language);
+            if (movies != null && movies.Count() <= 0)
+                return NotFound(new { message = "No movie found for this multiplex." });
+
+            foreach (Movie movie in movies)
+            {
+                results.Add(new MovieDto
+                {
+                    Movie_Name = movie.Movie_Name,
+                    DateAndTime = movie.DateAndTime,
+                    MovieLanguage = movie.MovieLanguage,
+                    Movie_Description = movie.Movie_Description,
+                    Genre = movie.Genre
+
+                });
+            }
+            return Ok(results);
+        }
+
+        [HttpGet]
+        [Route("movie/genre/{genre}")]
+        public IActionResult MoviesByGenre(string genre)
+        {
+            var results = new List<MovieDto>();
+            var movies = _movieRepo.GetMoviesByGenre(genre);
+            if (movies != null && movies.Count() <= 0)
+                return NotFound(new { message = "No movie found for this genre." });
+
+            foreach (Movie movie in movies)
+            {
+                results.Add(new MovieDto
+                {
+                    Movie_Name = movie.Movie_Name,
+                    DateAndTime = movie.DateAndTime,
+                    MovieLanguage = movie.MovieLanguage,
+                    Movie_Description = movie.Movie_Description,
+                    Genre = movie.Genre
 
                 });
             }

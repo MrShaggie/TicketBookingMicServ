@@ -13,11 +13,11 @@ namespace MovieManagerService.Entities
         public string Movie_Name { get; set; }
         public string Movie_Description { get; set; }
         public DateTime DateAndTime { get; set; }
-        public string MovieImage { get; set; }
         public string MovieLanguage { get; set; }
-
         [ForeignKey("MultiplexId")]
         public Multiplex Multiplex { get; set; }
         public int MultiplexId { get; set; }
+        [Required]
+        public string Genre { get; set; }
     }
 }

@@ -60,9 +60,9 @@ namespace MovieManagerService.DataService
         /// </summary>
         /// <param name="movieId"></param>
         /// <returns></returns>
-        public Movie GetMovieDetails(int movieId)
+        public IEnumerable<Movie> GetMoviesByGenre(string genre)
         {
-            return _movieContext.Movies.Where(x => x.Id == movieId).SingleOrDefault();
+            return _movieContext.Movies.Where(x => x.Genre == genre);
         }   
         
         public int AddMovies(MovieDto movieDto)
@@ -73,7 +73,8 @@ namespace MovieManagerService.DataService
                 MovieLanguage = movieDto.MovieLanguage,
                 Movie_Description = movieDto.Movie_Description,
                 DateAndTime = Convert.ToDateTime(movieDto.DateAndTime),
-                MultiplexId = movieDto.MultiplexId
+                MultiplexId = movieDto.MultiplexId,
+                Genre = movieDto.Genre
 
             };
             _movieContext.Movies.Add(newMovie);

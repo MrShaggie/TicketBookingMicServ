@@ -19,6 +19,6 @@ namespace MovieManagerService.DataService
 
         int AddMovies(MovieDto movieDto);
 
-        Movie GetMovieDetails(int movieId);
+        IEnumerable<Movie> GetMoviesByGenre(string genre);
     }
 }
