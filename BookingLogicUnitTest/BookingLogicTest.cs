@@ -7,22 +7,22 @@ namespace BookingLogicUnitTest
     public class Tests
     {
         List<string> bookedSeats = new List<string>();
-        List<int> expectSeats = new List<int>();
+        List<int> expectedSeats = new List<int>();
 
         [SetUp]
         public void Setup()
         {
             bookedSeats.Add("1,2,3,4,5");
             bookedSeats.Add("6,7,8");
-            
-            expectSeats.Add(1);
-            expectSeats.Add(2);
-            expectSeats.Add(3);
-            expectSeats.Add(4);
-            expectSeats.Add(5);
-            expectSeats.Add(6);
-            expectSeats.Add(7);
-            expectSeats.Add(8);
+
+            expectedSeats.Add(1);
+            expectedSeats.Add(2);
+            expectedSeats.Add(3);
+            expectedSeats.Add(4);
+            expectedSeats.Add(5);
+            expectedSeats.Add(6);
+            expectedSeats.Add(7);
+            expectedSeats.Add(8);
         }
 
         [Test]
@@ -31,7 +31,7 @@ namespace BookingLogicUnitTest
             var bookingLogic = new BookingManagerService.DataService.BookingLogic();
             List<int> actualSeats = bookingLogic.GetBookedSeats(bookedSeats);
 
-            Assert.AreEqual(expectSeats, actualSeats);
+            Assert.AreEqual(expectedSeats, actualSeats);
         }
 
         [Test]
