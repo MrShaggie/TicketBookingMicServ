@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityManagerService", "IdentityManagerService\IdentityManagerService.csproj", "{B87BFA3F-0C7D-43F3-81F0-273B061F91EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityManagerService", "IdentityManagerService\IdentityManagerService.csproj", "{B87BFA3F-0C7D-43F3-81F0-273B061F91EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieManagerService", "MovieManagerService\MovieManagerService.csproj", "{A0287EAB-06C0-41BF-93B0-B09078313061}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieManagerService", "MovieManagerService\MovieManagerService.csproj", "{A0287EAB-06C0-41BF-93B0-B09078313061}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingManagerService", "BookingManagerService\BookingManagerService.csproj", "{401DA809-88F4-44F7-AEAE-4027C1F7802D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookingManagerService", "BookingManagerService\BookingManagerService.csproj", "{401DA809-88F4-44F7-AEAE-4027C1F7802D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingLogicUnitTest", "BookingLogicUnitTest\BookingLogicUnitTest.csproj", "{8563911D-6E5C-4EA9-A94F-F6886A213785}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{401DA809-88F4-44F7-AEAE-4027C1F7802D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{401DA809-88F4-44F7-AEAE-4027C1F7802D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{401DA809-88F4-44F7-AEAE-4027C1F7802D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8563911D-6E5C-4EA9-A94F-F6886A213785}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8563911D-6E5C-4EA9-A94F-F6886A213785}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8563911D-6E5C-4EA9-A94F-F6886A213785}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8563911D-6E5C-4EA9-A94F-F6886A213785}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
